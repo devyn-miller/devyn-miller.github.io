@@ -201,7 +201,7 @@ header .navbar ul li a:hover{
 .backbtn .btn i {
   margin-right: 0.5rem;
   font-size: 1.5rem;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 .backbtn .btn:hover{
   background: #1a047e;

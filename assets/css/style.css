@@ -9,7 +9,7 @@
   outline: none;
   border: none;
   text-transform: capitalize;
-  transition: all 0.2s linear;
+  transition: all 0.25s linear;
 }
 html {
   font-size: 62.5%;
@@ -113,7 +113,7 @@ header .navbar ul li a {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
@@ -296,9 +296,9 @@ header .navbar ul li a:hover {
   text-align: center;
   margin-right: 8px;
   border-radius: 100%;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 .social-icons a:active,
 .social-icons a:focus,
@@ -490,7 +490,7 @@ header .navbar ul li a:hover {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
+  transition: 0.25s;
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
@@ -1140,7 +1140,7 @@ form .button-area {
   border-radius: 5rem;
   font-size: 1.7rem;
   margin-right: 1rem;
-  transition: 0.2s;
+  transition: 0.25s;
   background: rgb(230, 230, 230);
   color: #02094b;
   border: none;
@@ -1222,4 +1222,33 @@ form .button-area {
 #scroll-top.active {
   top: calc(100% - 12rem);
 }
-/* scroll top ends */
+
+/* Add this to /css/style.css */
+
+/* Modern font from SeanHalpin example */
+
+
+/* Scroll Progress Bar */
+#scrollProgressBar {
+  position: fixed;
+  height: 4px;
+  background: #29d;
+  width: 0;
+  top: 0;
+  z-index: 999;
+}
+
+/* Skill Icon Hover Animation */
+.skill-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+/* Add this to /css/style.css */
+
+/* Modern font from SeanHalpin example */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
