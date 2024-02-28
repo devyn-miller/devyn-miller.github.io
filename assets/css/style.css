@@ -86,6 +86,12 @@ section {
 .heading span {
   color: rgb(115, 3, 167);
 }
+.skill-caption {
+  font-size: 0.8em; /* Example font size */
+  color: #666; /* Example text color */
+  margin-top: 4px; /* Example margin */
+  /* Additional styling as needed */
+}
 header .logo {
   font-size: 1.9rem;
   font-weight: 800;
