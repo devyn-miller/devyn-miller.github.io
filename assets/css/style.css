@@ -9,7 +9,7 @@
   outline: none;
   border: none;
   text-transform: capitalize;
-  transition: all 0.25s linear;
+  transition: all 0.2s linear;
 }
 html {
   font-size: 62.5%;
@@ -86,60 +86,6 @@ section {
 .heading span {
   color: rgb(115, 3, 167);
 }
-/* Skills Section */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
-  gap: 20px; /* Space between columns */
-}
-
-.skills-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.skill-category {
-  margin-bottom: 2rem; /* Spacing between categories */
-  color: #ffffff; /* Assuming a dark theme similar to the images */
-}
-
-.skill-category h3 {
-  font-size: 1.5rem;
-  color: #ffcc00; /* A gold color for category titles */
-  margin-bottom: 1rem; /* Spacing below the category title */
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem; /* Spacing between skill items */
-}
-
-.skill img {
-  width: 36px; /* Adjust size as needed */
-  height: auto;
-  margin-right: 1rem; /* Spacing between icon and text */
-}
-
-.skill-name {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #ffffff; /* White text for skill names */
-}
-
-.skill-caption {
-  font-size: 1rem;
-  color: #cccccc; /* Lighter text for captions */
-}
-
-
-/* Add responsive design if needed */
-@media (max-width: 768px) {
-  .skills-container {
-      grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  }
-}
 header .logo {
   font-size: 1.9rem;
   font-weight: 800;
@@ -167,7 +113,7 @@ header .navbar ul li a {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
-  transition: 0.25s;
+  transition: 0.2s;
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
@@ -350,9 +296,9 @@ header .navbar ul li a:hover {
   text-align: center;
   margin-right: 8px;
   border-radius: 100%;
-  -webkit-transition: all 0.25s linear;
-  -o-transition: all 0.25s linear;
-  transition: all 0.25s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .social-icons a:active,
 .social-icons a:focus,
@@ -434,6 +380,49 @@ header .navbar ul li a:hover {
   color: rgb(27, 27, 27);
   font-size: 2.5rem;
 }
+.frameworks .row .content h3 {
+  color: rgb(200, 200, 182);
+  font-size: 2.3rem;
+}
+
+.frameworks .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+
+.languages .row .content h3 {
+  color: rgb(200, 200, 182);
+  font-size: 2.3rem;
+}
+
+.languages .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+
+
+.servers .row .content h3 {
+  color: rgb(200, 200, 182);
+  font-size: 2.3rem;
+}
+
+.servers .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+
+
+.libraries .row .content h3 {
+  color: rgb(200, 200, 182);
+  font-size: 2.3rem;
+}
+
+.libraries .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+
+
+
+
+
+
 .about .row .content .tag {
   font-size: 1.4rem;
   color: #020133;
@@ -512,18 +501,36 @@ header .navbar ul li a:hover {
 /* about media queries ends*/
 /* about section ends */
 
-/* skills section starts */
-.skills {
+.languages {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
 }
-.skills h2 {
+
+/* education section starts */
+.skill_ab h1 {
+  color: rgba(0, 0, 0);
+  padding: 0; /* Adjust the padding as needed */
+  margin: 0; /* Optional: Reset margin to remove any default spacing */
+}
+
+.skill_ab {
+  background: white;
+  max-height: 10px;
+}
+
+
+/* languages section starts */
+.languages {
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
+}
+.languages h2 {
   color: #fff;
 }
-.skills .heading span {
+.languages .heading span {
   color: rgb(255, 230, 0);
 }
-.skills .container {
+.languages .container {
   background: rgba(0, 0, 22, 0.4);
   color: #fff;
   border-radius: 1rem;
@@ -532,35 +539,35 @@ header .navbar ul li a:hover {
   margin: auto;
   margin-top: 2rem;
 }
-.skills .container .row {
+.languages .container .row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   flex-wrap: wrap;
   gap: 1.8rem;
 }
-.skills .container .bar {
+.languages .container .bar {
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 22, 0.9);
-  transition: 0.25s;
+  transition: 0.2s;
 }
-.skills .container .bar:hover {
+.languages .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
-.skills .container .bar .info {
+.languages .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
 }
-.skills .container .bar .info i {
+.languages .container .bar .info i {
   font-size: 4rem;
 }
-.skills .container .bar .info span {
+.languages .container .bar .info span {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Poppins";
@@ -568,17 +575,241 @@ header .navbar ul li a:hover {
 }
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
-  .skills .container {
+  .languages .container {
     padding: 0;
     margin: 0;
   }
-  .skills .container .row {
+  .languages .container .row {
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
   }
-  .skills .container {
+  .languages .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+/* skills media queries ends*/
+/* skills section ends */
+
+/* skills section starts */
+.frameworks {
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
+}
+.frameworks h2 {
+  color: #fff;
+}
+.frameworks .heading span {
+  color: rgb(255, 230, 0);
+}
+.frameworks .container {
+  background: rgba(0, 0, 22, 0.4);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.frameworks .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.frameworks .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 22, 0.9);
+  transition: 0.2s;
+}
+.frameworks .container .bar:hover {
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.frameworks .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.frameworks .container .bar .info i {
+  font-size: 4rem;
+}
+.frameworks .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-left: 0.5rem;
+}
+/* frameworks media queries starts*/
+@media screen and (max-width: 600px) {
+  .frameworks .container {
+    padding: 0;
+    margin: 0;
+  }
+  .frameworks .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .frameworks .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+/* frameworks media queries ends*/
+/* frameworks section ends */
+
+
+/* skills section starts */
+.servers {
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
+}
+.servers h2 {
+  color: #fff;
+}
+.servers .heading span {
+  color: rgb(255, 230, 0);
+}
+.servers .container {
+  background: rgba(0, 0, 22, 0.4);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.servers .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.servers .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 22, 0.9);
+  transition: 0.2s;
+}
+.servers .container .bar:hover {
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.servers .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.servers .container .bar .info i {
+  font-size: 4rem;
+}
+.servers .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-left: 0.5rem;
+}
+/* servers media queries starts*/
+@media screen and (max-width: 600px) {
+  .servers .container {
+    padding: 0;
+    margin: 0;
+  }
+  .servers .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .servers .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+/* servers media queries ends*/
+/* servers section ends */
+
+
+/* libraries section starts */
+.libraries {
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
+}
+.libraries h2 {
+  color: #fff;
+}
+.libraries .heading span {
+  color: rgb(255, 230, 0);
+}
+.libraries .container {
+  background: rgba(0, 0, 22, 0.4);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.libraries .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.libraries .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 22, 0.9);
+  transition: 0.2s;
+}
+.libraries .container .bar:hover {
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.libraries .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.libraries .container .bar .info i {
+  font-size: 4rem;
+}
+.libraries .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-left: 0.5rem;
+}
+/* skills media queries starts*/
+@media screen and (max-width: 600px) {
+  .libraries .container {
+    padding: 0;
+    margin: 0;
+  }
+  .libraries .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .libraries .container {
     margin-top: 5px;
     width: 100%;
   }
@@ -591,6 +822,9 @@ header .navbar ul li a:hover {
   background: #e5ecfb;
   min-height: 80vh;
 }
+
+
+
 .education .qoute {
   font-size: 1.5rem;
   text-align: center;
@@ -1194,7 +1428,7 @@ form .button-area {
   border-radius: 5rem;
   font-size: 1.7rem;
   margin-right: 1rem;
-  transition: 0.25s;
+  transition: 0.2s;
   background: rgb(230, 230, 230);
   color: #02094b;
   border: none;
@@ -1276,33 +1510,4 @@ form .button-area {
 #scroll-top.active {
   top: calc(100% - 12rem);
 }
-
-/* Add this to /css/style.css */
-
-/* Modern font from SeanHalpin example */
-
-
-/* Scroll Progress Bar */
-#scrollProgressBar {
-  position: fixed;
-  height: 4px;
-  background: #29d;
-  width: 0;
-  top: 0;
-  z-index: 999;
-}
-
-/* Skill Icon Hover Animation */
-.skill-icon:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-
-/* Add this to /css/style.css */
-
-/* Modern font from SeanHalpin example */
-body {
-  font-family: 'Montserrat', sans-serif;
-}
-
+/* scroll top ends */

@@ -79,29 +79,106 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
+
+
+async function fetchData(type = "languages") {
     let response
-    type === "skills" ?
-        response = await fetch("skills.json")
+    type === "languages" ?
+        response = await fetch("languages.json")
         :
         response = await fetch("./projects/projects.json")
     const data = await response.json();
     return data;
 }
 
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
+async function fetchData(type = "frameworks") {
+    let response
+    type === "frameworks" ?
+        response = await fetch("frameworks.json")
+        :
+        response = await fetch("./projects/projects.json")
+    const data = await response.json();
+    return data;
+}
+
+async function fetchData(type = "servers") {
+    let response
+    type === "servers" ?
+        response = await fetch("servers.json")
+        :
+        response = await fetch("./projects/projects.json")
+    const data = await response.json();
+    return data;
+}
+
+async function fetchData(type = "libraries") {
+    let response
+    type === "libraries" ?
+        response = await fetch("libraries.json")
+        :
+        response = await fetch("./projects/projects.json")
+    const data = await response.json();
+    return data;
+}
+
+function showLanguages(languages) {
+    let languagesContainer = document.getElementById("languagesContainer");
+    let languagesHTML = "";
+    languages.forEach(languages => {
+        languagesHTML += `
         <div class="bar">
               <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
+                <img src=${languages.icon} alt="languages" />
+                <span>${languages.name}</span>
               </div>
             </div>`
     });
-    skillsContainer.innerHTML = skillHTML;
+    languagesContainer.innerHTML = languagesHTML;
+}
+
+function showFrameworks(frameworks) {
+    let frameworksContainer = document.getElementById("frameworksContainer");
+    let frameworksHTML = "";
+    frameworks.forEach(frameworks => {
+        frameworksHTML += `
+        <div class="bar">
+              <div class="info">
+                <img src=${frameworks.icon} alt="frameworks" />
+                <span>${frameworks.name}</span>
+              </div>
+            </div>`
+    });
+    frameworksContainer.innerHTML = frameworksHTML;
+}
+
+function showServers(servers) {
+    let serversContainer = document.getElementById("serversContainer");
+    let serversHTML = "";
+    servers.forEach(servers => {
+        serversHTML += `
+        <div class="bar">
+              <div class="info">
+                <img src=${servers.icon} alt="servers" />
+                <span>${servers.name}</span>
+              </div>
+            </div>`
+    });
+    serversContainer.innerHTML = serversHTML;
+}
+
+function showLibraries(libraries) {
+    let librariesContainer = document.getElementById("librariesContainer");
+    let librariesHTML = "";
+    libraries.forEach(libraries => {
+        librariesHTML += `
+        <div class="bar">
+              <div class="info">
+                <img src=${libraries.icon} alt="libraries" />
+                <span>${libraries.name}</span>
+              </div>
+            </div>`
+    });
+    librariesContainer.innerHTML = librariesHTML;
 }
 
 function showProjects(projects) {
@@ -146,8 +223,23 @@ function showProjects(projects) {
 
 }
 
+
+
+
 fetchData().then(data => {
-    showSkills(data);
+    showLanguages(data);
+});
+
+fetchData().then(data => {
+    showFrameworks(data);
+});
+
+fetchData().then(data => {
+    showServers(data);
+});
+
+fetchData().then(data => {
+    showLibraries(data);
 });
 
 fetchData("projects").then(data => {
@@ -233,8 +325,20 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.languages .container', { interval: 200 });
+srtop.reveal('.languages .container .bar', { delay: 400 });
+
+/* SCROLL SKILLS */
+srtop.reveal('.frameworks .container', { interval: 200 });
+srtop.reveal('.frameworks .container .bar', { delay: 400 });
+
+/* SCROLL SKILLS */
+srtop.reveal('.servers .container', { interval: 200 });
+srtop.reveal('.servers .container .bar', { delay: 400 });
+
+/* SCROLL SKILLS */
+srtop.reveal('.libraries .container', { interval: 200 });
+srtop.reveal('.libraries .container .bar', { delay: 400 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
