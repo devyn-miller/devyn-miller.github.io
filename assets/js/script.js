@@ -39,18 +39,9 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
-        emailjs.init({
-            publicKey: 'JwfblCL4XTnh9fRwu',
-            },
-            limitRate: {
-              // Set the limit rate for the application
-              id: 'app',
-              // Allow 1 request per 10s
-              throttle: 10000,
-            },
-          });
+        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
-        emailjs.sendForm('service_lauw5tt', '__ejs-test-mail-service__', '#contact-form')
+        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
@@ -87,23 +78,6 @@ var typed = new Typed(".typing-text", {
     backDelay: 500,
 });
 // <!-- typed js effect ends -->
-// Fetch Projects and display them
-fetch('projects.json')
-  .then(response => response.json())
-  .then(projects => {
-    const projectsContainer = document.getElementById('projectsContainer');
-    projects.forEach(project => {
-      projectsContainer.innerHTML += `
-        <div class="project">
-          <img src="${project.image}" alt="${project.name}" />
-          <h3>${project.name}</h3>
-          <p>${project.description}</p>
-          <a href="${project.link}" target="_blank">Learn More</a>
-        </div>
-      `;
-    });
-  })
-  .catch(error => console.error('Error loading projects:', error));
 
 async function fetchData(type = "skills") {
     let response
@@ -245,7 +219,10 @@ srtop.reveal('.home .content .btn', { delay: 200 });
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
-
+srtop.reveal('.home .twitter', { interval: 1000 });
+srtop.reveal('.home .telegram', { interval: 600 });
+srtop.reveal('.home .instagram', { interval: 600 });
+srtop.reveal('.home .dev', { interval: 600 });
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
