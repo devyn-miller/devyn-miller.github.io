@@ -86,11 +86,59 @@ section {
 .heading span {
   color: rgb(115, 3, 167);
 }
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 20px; /* Space between columns */
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.skill-category {
+  margin-bottom: 2rem; /* Spacing between categories */
+  color: #ffffff; /* Assuming a dark theme similar to the images */
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  color: #ffcc00; /* A gold color for category titles */
+  margin-bottom: 1rem; /* Spacing below the category title */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* Spacing between skill items */
+}
+
+.skill img {
+  width: 36px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 1rem; /* Spacing between icon and text */
+}
+
+.skill-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff; /* White text for skill names */
+}
+
 .skill-caption {
-  font-size: 0.8em; /* Example font size */
-  color: #666; /* Example text color */
-  margin-top: 4px; /* Example margin */
-  /* Additional styling as needed */
+  font-size: 1rem;
+  color: #cccccc; /* Lighter text for captions */
+}
+
+
+/* Add responsive design if needed */
+@media (max-width: 768px) {
+  .skills-container {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
 }
 header .logo {
   font-size: 1.9rem;
